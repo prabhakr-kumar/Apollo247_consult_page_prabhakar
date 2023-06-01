@@ -5,8 +5,7 @@ Feature: To Check Online Doctor Consult Page
    Given Chrome is opened and Apollo247 app is opened
    When User clicks on Consult Section
    Then User navigates on the Consult Page
-   When User Search for Doctors and specialities 
-   And  User clicks on popular cities 
+   When  User clicks on popular cities 
    Then User naviagtes to Doctors Details Page
    When User Clicks on the Book Hospital Visit button
    And  User enters contact number
@@ -27,8 +26,7 @@ Feature: To Check Online Doctor Consult Page
    Given Chrome is opened and Apollo247 app is opened
    When User clicks on Consult Section
    Then User navigates on the Consult Page
-   When User Search for Doctors and specialities 
-   And  User clicks on popular cities 
+   When  User clicks on popular cities 
    Then User naviagtes to Doctors Details Page
    When User Clicks on the Book Hospital Visit button
    And  User enters contact number

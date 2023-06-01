@@ -14,6 +14,9 @@ public class LandingPage  extends Utility{
 	@FindBy(xpath="//*[text()='Consult']")
 	private WebElement Consult;
 	
+	@FindBy(xpath="//*[text()='Online Doctor Consultation'][1]")
+	 WebElement textElement;
+	
 	public LandingPage() throws IOException
 	{
 		PageFactory.initElements(driver, this);
@@ -28,6 +31,10 @@ public class LandingPage  extends Utility{
 	public String validateLandingPageTitle()
 	{
 		return driver.getTitle();
+	}
+	public String textCapture() {
+		return textElement.getText();
+		
 	}
 	
 //	public void consult_click() {

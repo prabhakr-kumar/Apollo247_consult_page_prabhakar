@@ -17,10 +17,7 @@ public class Doctor_consult_page_steps_2 {
 	public void user_navigates_on_the_consult_page() {
 	 
 	}
-	@When("User Search for Doctors and specialities")
-	public void user_search_for_doctors_and_specialities() {
-
-	}
+	
 	@When("User clicks on popular cities")
 	public void user_clicks_on_popular_cities() {
 	}

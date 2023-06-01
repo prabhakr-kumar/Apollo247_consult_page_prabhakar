@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="24.742" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="Online Doctor Consultation" name="Validate User navigates onto Doctor Consult Page" time="24.565">
-<failure/>
+<testsuite name="Cucumber" time="37.681" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Online Doctor Consultation" name="   Validate Doctor Consult page UI" time="37.422">
 <system-out><![CDATA[
 Given Chrome is opened and Apollo247 app is opened..........................passed
 When User clicks on Consult Section.........................................passed
-Then User navigates on the Consult Page.....................................undefined
+Then User navigates on the Consult Page.....................................passed
+When User clicks on popular cities..........................................passed
+Then User naviagtes to Doctors Details Page.................................passed
+Then Doctors detail fields are visible to user..............................passed
 ]]></system-out>
 </testcase>
 </testsuite>
