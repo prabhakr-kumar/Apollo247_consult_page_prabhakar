@@ -1,13 +1,8 @@
 package testrunner;
-
-
-
-
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 
-import org.junit.runner.RunWith;
 @CucumberOptions(
 		features = {"src/test/resources/features/Doctor_consult_page1.feature"},
 		glue = {"doctor_consult_stepdefinitions_1","apphooks" },

@@ -1,70 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="35.205" tests="3" skipped="0" failures="3" errors="0">
-<testcase classname="Online Doctor Consultation" name="Validate User navigates onto Doctor Consult Page" time="13.767">
-<failure type="java.lang.AssertionError" message="expected [Apollo 247 - Online Doctor Consultation &amp; Book Lab Tests at Home] but found [Apollo 247 Page]">
-<![CDATA[java.lang.AssertionError: expected [Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home] but found [Apollo 247 Page]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at doctor_consult_stepdefinitions_1.Doctor_consult_page_steps_1.chrome_is_opened_and_apollo247_app_is_opened(Doctor_consult_page_steps_1.java:35)
-	at ✽.Chrome is opened and Apollo247 app is opened(file:///C:/Users/pkum1389/eclipse-workspace/Apollo_Dcotor_consult_prabhakar/src/test/resources/features/Doctor_consult_page1.feature:5)
-]]>
-</failure>
+<testsuite name="Cucumber" time="24.742" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Online Doctor Consultation" name="Validate User navigates onto Doctor Consult Page" time="24.565">
+<failure/>
 <system-out><![CDATA[
-Given Chrome is opened and Apollo247 app is opened..........................failed
-When User clicks on Consult Section.........................................skipped
-Then User navigates on the Consult Page.....................................skipped
-]]></system-out>
-</testcase>
-<testcase classname="Online Doctor Consultation" name="   Validate Doctor Consult page UI" time="10.561">
-<failure type="java.lang.AssertionError" message="expected [Apollo 247 - Online Doctor Consultation &amp; Book Lab Tests at Home] but found [Apollo 247 Page]">
-<![CDATA[java.lang.AssertionError: expected [Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home] but found [Apollo 247 Page]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at doctor_consult_stepdefinitions_1.Doctor_consult_page_steps_1.chrome_is_opened_and_apollo247_app_is_opened(Doctor_consult_page_steps_1.java:35)
-	at ✽.Chrome is opened and Apollo247 app is opened(file:///C:/Users/pkum1389/eclipse-workspace/Apollo_Dcotor_consult_prabhakar/src/test/resources/features/Doctor_consult_page1.feature:11)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Chrome is opened and Apollo247 app is opened..........................failed
-When User clicks on Consult Section.........................................skipped
-Then User navigates on the Consult Page.....................................skipped
-When User Search for Doctors and specialities...............................skipped
-And User clicks on popular cities...........................................skipped
-Then User naviagtes to Doctors Details Page.................................skipped
-Then Doctors detail fields are visible to user..............................skipped
-]]></system-out>
-</testcase>
-<testcase classname="Online Doctor Consultation" name="   Validate Sort By on Doctor Consult Page" time="10.603">
-<failure type="java.lang.AssertionError" message="expected [Apollo 247 - Online Doctor Consultation &amp; Book Lab Tests at Home] but found [Apollo 247 Page]">
-<![CDATA[java.lang.AssertionError: expected [Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home] but found [Apollo 247 Page]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at doctor_consult_stepdefinitions_1.Doctor_consult_page_steps_1.chrome_is_opened_and_apollo247_app_is_opened(Doctor_consult_page_steps_1.java:35)
-	at ✽.Chrome is opened and Apollo247 app is opened(file:///C:/Users/pkum1389/eclipse-workspace/Apollo_Dcotor_consult_prabhakar/src/test/resources/features/Doctor_consult_page1.feature:20)
-]]>
-</failure>
-<system-out><![CDATA[
-Given Chrome is opened and Apollo247 app is opened..........................failed
-When User clicks on Consult Section.........................................skipped
-Then User navigates on the Consult Page.....................................skipped
-When User Search for Doctors and specialities...............................skipped
-And User clicks on popular cities...........................................skipped
-Then User naviagtes to Doctors Details Page.................................skipped
-When User clicks on sort by Field...........................................skipped
-And User selects Price- Low to High.........................................skipped
-Then Application sorts the doctors list based on price......................skipped
+Given Chrome is opened and Apollo247 app is opened..........................passed
+When User clicks on Consult Section.........................................passed
+Then User navigates on the Consult Page.....................................undefined
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -6,7 +6,7 @@
       <class name="testrunner.Doctor_consult_testrunner_1">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0 1 2"/>
+          <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- testrunner.Doctor_consult_testrunner_1 -->
