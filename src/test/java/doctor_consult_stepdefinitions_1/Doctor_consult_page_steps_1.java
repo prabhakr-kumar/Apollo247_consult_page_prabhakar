@@ -30,7 +30,7 @@ public class Doctor_consult_page_steps_1 {
 	}
 	
 	@Given("Chrome is opened and Apollo247 app is opened")
-	public void chrome_is_opened_and_apollo247_app_is_opened() throws IOException, InterruptedException {
+	public void chrome_is_opened_and_apollo247_app_is_opened() throws Exception {
 
 		objectMethod();
 		Thread.sleep(5000);
@@ -38,15 +38,22 @@ public class Doctor_consult_page_steps_1 {
 		String expectedtitle = "Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home";
 		assertEquals(expectedtitle, actualtitle);
 		System.out.println(actualtitle); 
-		Thread.sleep(2000);
+
+	    ldp.captureScreenshot();
+	    Thread.sleep(2000);
+//		Thread.sleep(2000);
+		
+		ldp.notification_close();
+		
 	
 	}
 	@When("User clicks on Consult Section")
-	public void user_clicks_on_consult_section() throws InterruptedException, IOException {
+	public void user_clicks_on_consult_section() throws Exception {
 		objectMethod();
 	    Thread.sleep(5000);
 	    ldp.OnlineDoctorconsultPageNavigation();
 	    Thread.sleep(5000);
+	    
 	    
 //	    String actualText = ldp.textCapture();
 //	    String expectedText = "Online Doctor Consultation";

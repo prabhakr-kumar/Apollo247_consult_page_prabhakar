@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="37.681" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Online Doctor Consultation" name="   Validate Doctor Consult page UI" time="37.422">
+<testsuite name="Cucumber" time="34.806" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Online Doctor Consultation" name="   Validate Doctor Consult page UI" time="34.532">
 <system-out><![CDATA[
 Given Chrome is opened and Apollo247 app is opened..........................passed
 When User clicks on Consult Section.........................................passed
