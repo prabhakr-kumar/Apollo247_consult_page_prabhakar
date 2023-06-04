@@ -1,47 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-02T14:28:40 IST" name="Default suite" finished-at="2023-06-02T14:29:16 IST" duration-ms="35724">
+  <suite started-at="2023-06-04T12:34:37 IST" name="Default suite" finished-at="2023-06-04T22:21:36 IST" duration-ms="35218980">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.Doctor_consult_testrunner_1@196a42c3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.Doctor_consult_testrunner_2@196a42c3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-06-02T14:28:40 IST" name="Default test" finished-at="2023-06-02T14:29:16 IST" duration-ms="35724">
-      <class name="testrunner.Doctor_consult_testrunner_1">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.Doctor_consult_testrunner_1@196a42c3]" started-at="2023-06-02T14:28:40 IST" name="setUpClass" finished-at="2023-06-02T14:28:41 IST" duration-ms="889" status="PASS">
+    <test started-at="2023-06-04T12:34:37 IST" name="Default test" finished-at="2023-06-04T22:21:36 IST" duration-ms="35218980">
+      <class name="testrunner.Doctor_consult_testrunner_2">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.Doctor_consult_testrunner_2@196a42c3]" started-at="2023-06-04T12:34:37 IST" name="setUpClass" finished-at="2023-06-04T12:34:38 IST" duration-ms="932" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2c7db926]]>
+                <![CDATA[org.testng.TestRunner@5ec1963c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.Doctor_consult_testrunner_1@196a42c3]" started-at="2023-06-02T14:28:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-02T14:29:16 IST" duration-ms="34659" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.Doctor_consult_testrunner_2@196a42c3]" started-at="2023-06-04T12:34:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-04T22:21:36 IST" duration-ms="35217893" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["   Validate Doctor Consult page UI"]]>
+                <![CDATA["Verify Login functionality with Valid registered number"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Online Doctor Consultation"]]>
+                <![CDATA["To Check Online Doctor Consult Page"]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.90)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6d21d974ef1b8da282afd491e41c862b, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.90, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:60381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60381/devtoo..., se:cdpVersion: 114.0.5735.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d21d974ef1b8da282afd491e41c862b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.90)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6d21d974ef1b8da282afd491e41c862b, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.90, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:60381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60381/devtoo..., se:cdpVersion: 114.0.5735.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d21d974ef1b8da282afd491e41c862b
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:318)
+at com.utility.Utility.captureScreenshot(Utility.java:81)
+at doctor_consult_stepdefinitions_2.Doctor_consult_page_steps_2.chrome_is_opened_and_apollo247_app_is_opened(Doctor_consult_page_steps_2.java:38)
+at ✽.Chrome is opened and Apollo247 app is opened(file:///C:/Users/pkum1389/eclipse-workspace/Apollo_Dcotor_consult_prabhakar/src/test/resources/features/Doctor_consult_page2.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.Doctor_consult_testrunner_1@196a42c3]" started-at="2023-06-02T14:29:16 IST" name="tearDownClass" finished-at="2023-06-02T14:29:16 IST" duration-ms="112" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.Doctor_consult_testrunner_2@196a42c3]" started-at="2023-06-04T22:21:36 IST" name="tearDownClass" finished-at="2023-06-04T22:21:36 IST" duration-ms="83" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- testrunner.Doctor_consult_testrunner_1 -->
+      </class> <!-- testrunner.Doctor_consult_testrunner_2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

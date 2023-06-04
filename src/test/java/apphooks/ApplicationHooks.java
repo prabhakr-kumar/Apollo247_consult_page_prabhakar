@@ -17,7 +17,7 @@ public class ApplicationHooks extends Utility {
 		
 		Utility.launchingApp();
 		
-		
+		Utility.browserMaximize();
 		
 		
 	}

@@ -19,8 +19,14 @@ public class LandingPage  extends Utility{
 	@FindBy(xpath="//*[text()='Consult']")
 	private WebElement Consult;
 	
+	
+	//For Online Doctor Consultation page textElement
+	
 	@FindBy(xpath="//*[text()='Online Doctor Consultation'][1]")
 	 WebElement textElement;
+	
+	
+	//For popup Notification close
 	
 	@FindBy(xpath="//*[@id='wzrk-cancel']")
     private WebElement notification_close;
@@ -50,28 +56,10 @@ public class LandingPage  extends Utility{
 	{
 		return driver.getTitle();
 	}
+	
 	public String textCapture() {
 		return textElement.getText();
 		
 	}
-	public void captureScreenshot() throws Exception {
-		
-		Date currentDate = new Date();
-		String screenshotFileName = currentDate.toString().replace(" ", "-").replace(":", "-");
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File binaryFile = ts.getScreenshotAs(OutputType.FILE);
-		
-		//Make sure screenshots folder is already created at the project level
-		File imageFile = new File(screenshotsPath + screenshotFileName + ".png"); 
-		FileUtils.copyFile(binaryFile, imageFile);
-		
-		
-	}
-	
-//	public void consult_click() {
-//		Consult.click();
-//	}
-	
-	
 	
 }
