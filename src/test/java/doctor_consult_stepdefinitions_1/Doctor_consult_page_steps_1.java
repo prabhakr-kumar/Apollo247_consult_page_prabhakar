@@ -4,16 +4,18 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 
+import com.aventstack.extentreports.Status;
 import com.pages.DoctorsPage;
 import com.pages.LandingPage;
 import com.pages.OnlineDoctorconsultPage;
+import com.utility.Utility;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class Doctor_consult_page_steps_1 {
+public class Doctor_consult_page_steps_1 extends Utility {
 //	WebDriver driver;
 
 	public LandingPage ldp;
@@ -38,9 +40,14 @@ public class Doctor_consult_page_steps_1 {
 		assertEquals(expectedtitle, actualtitle);
 		System.out.println(actualtitle); 
 
-		ldp.notification_close();
+//		ldp.notification_close();
 	    ldp.captureScreenshot();
 	    Thread.sleep(2000);
+	    
+	    logger = report.createTest("test01");
+	    logger.log(Status.INFO, "Validating landing page title");
+
+
 		
 		
 	

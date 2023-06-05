@@ -1,10 +1,10 @@
 Feature: Online Doctor Consultation 
 
-
-#Scenario:  Validate User navigates onto Doctor Consult Page
-   #Given Chrome is opened and Apollo247 app is opened
-   #When User clicks on Consult Section
-   #Then User navigates on the Consult Page
+#
+Scenario:  Validate User navigates onto Doctor Consult Page
+   Given Chrome is opened and Apollo247 app is opened
+   When User clicks on Consult Section
+   Then User navigates on the Consult Page
    
 #Scenario:    Validate Doctor Consult page UI
    #Given Chrome is opened and Apollo247 app is opened

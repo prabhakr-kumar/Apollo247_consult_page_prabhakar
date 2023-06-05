@@ -26,6 +26,8 @@ public class ApplicationHooks extends Utility {
 	public void quitBrowser() {
 		
 		Utility.closingBrowser();
+		report.flush();
+		
 		
 	}
 
