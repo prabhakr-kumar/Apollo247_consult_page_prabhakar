@@ -30,6 +30,12 @@ public class LandingPage  extends Utility{
 	
 	@FindBy(xpath="//*[@id='wzrk-cancel']")
     private WebElement notification_close;
+	
+
+	@FindBy(xpath="	//*[@title='Book Appointment with Apollo Doctors']\r\n"
+			+ "")
+    private WebElement element_displayed;
+	
 
 
 	
@@ -60,6 +66,9 @@ public class LandingPage  extends Utility{
 	public String textCapture() {
 		return textElement.getText();
 		
+	}
+	public boolean elementDispaly() {
+		return element_displayed.isDisplayed();
 	}
 	
     public void captureScreenshot() throws Exception {

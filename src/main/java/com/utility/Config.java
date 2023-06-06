@@ -10,6 +10,7 @@ public class Config {
 	
 	public static String chromeDriverPath = projectPath + "\\drivers\\chromedriver.exe";
 	public static String geckoDriverPath = projectPath + "\\drivers\\geckodriver.exe";
+    public static String excelPath = projectPath + "\\src\\main\\java\\com\\testdata\\testdata.xlsx";
 	
 	public static String screenshotsPath = projectPath + "\\screenshots\\";
 	

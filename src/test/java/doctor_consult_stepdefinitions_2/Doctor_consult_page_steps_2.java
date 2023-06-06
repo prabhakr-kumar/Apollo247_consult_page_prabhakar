@@ -4,15 +4,17 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 
+import com.aventstack.extentreports.Status;
 import com.pages.DoctorsPage;
 import com.pages.LandingPage;
 import com.pages.OnlineDoctorconsultPage;
+import com.utility.Utility;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Doctor_consult_page_steps_2 {
+public class Doctor_consult_page_steps_2 extends Utility {
 	public LandingPage ldp;
 	public OnlineDoctorconsultPage odcp;
 	public DoctorsPage dp;
@@ -28,16 +30,17 @@ public class Doctor_consult_page_steps_2 {
 	@Given("Chrome is opened and Apollo247 app is opened")
 	public void chrome_is_opened_and_apollo247_app_is_opened() throws Exception {
 		objectMethod();
-		Thread.sleep(5000);
+		Utility.implicitWait();
 		String actualtitle = ldp.validateLandingPageTitle();
 		String expectedtitle = "Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home";
 		assertEquals(expectedtitle, actualtitle);
-		System.out.println(actualtitle);
-		Thread.sleep(5000);
+		System.out.println(actualtitle); 
+		Thread.sleep(7000);
 		ldp.notification_close();
-		Thread.sleep(2000);
-		ldp.captureScreenshot();
-		Thread.sleep(2000);
+		System.out.println(ldp.elementDispaly());
+	    ldp.captureScreenshot();
+	    logger = report.createTest("test02");
+		logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
 	}
 
 	@When("User clicks on Consult Section")
@@ -53,12 +56,18 @@ public class Doctor_consult_page_steps_2 {
 //		System.out.println(actualText); 
 //
 //		Thread.sleep(2000);
+		
+		logger.log(Status.INFO, "User clicks on Consult Section");
+
 
 	}
 
 	@Then("User navigates on the Consult Page")
 	public void user_navigates_on_the_consult_page() throws InterruptedException {
 		Thread.sleep(2000);
+		
+		logger.log(Status.INFO, "User navigates on the Consult Page");
+
 
 	}
 
@@ -68,12 +77,16 @@ public class Doctor_consult_page_steps_2 {
 //		Click on the delhi button
 		dp.delhi_button();
 		Thread.sleep(3000);
+		logger.log(Status.INFO, "User clicks on popular cities");
+
 
 	}
 
 	@Then("User naviagtes to Doctors Details Page")
 	public void user_naviagtes_to_doctors_details_page() throws InterruptedException {
 		Thread.sleep(2000);
+		logger.log(Status.INFO, "User naviagtes to Doctors Details Page");
+
 
 	}
 
@@ -82,6 +95,8 @@ public class Doctor_consult_page_steps_2 {
 		objectMethod();
 		Thread.sleep(5000);
 		dp.filter();
+		logger.log(Status.INFO, "User clicks on sort by Field");
+
 
 	}
 
@@ -92,11 +107,16 @@ public class Doctor_consult_page_steps_2 {
 
 		dp.lowhigh();
 		Thread.sleep(3000);
+		logger.log(Status.INFO, "User selects Price- Low to High");
+
 
 	}
 
 	@Then("Application sorts the doctors list based on price")
-	public void application_sorts_the_doctors_list_based_on_price() {
+	public void application_sorts_the_doctors_list_based_on_price() throws InterruptedException {
+		Thread.sleep(4000);
+		logger.log(Status.INFO, "Application sorts the doctors list based on price");
+
 
 	}
 
@@ -105,14 +125,19 @@ public class Doctor_consult_page_steps_2 {
 		objectMethod();
 		dp.book_hospital();
 		Thread.sleep(4000);
+		
+		logger.log(Status.INFO, "User Clicks on the Book Hospital Visit button");
+
 
 	}
 
-	@When("User enters contact number")
-	public void user_enters_contact_number() throws IOException, InterruptedException {
+	@When("User enters contact number {string}")
+	public void user_enters_contact_number(String nu) throws IOException, InterruptedException {
 		objectMethod();
-		dp.login_page();
+		dp.login_page(nu);
 		Thread.sleep(4000); // This will enter the mobile number in login popup
+		logger.log(Status.INFO, "User enters contact number {string}");
+
 
 	}
 
@@ -121,6 +146,8 @@ public class Doctor_consult_page_steps_2 {
 		objectMethod();
 		dp.arrow_first();
 		Thread.sleep(4000);
+		logger.log(Status.INFO, "User click on arrow button");
+
 
 	}
 
@@ -130,6 +157,8 @@ public class Doctor_consult_page_steps_2 {
 		Thread.sleep(5000);
 		dp.arrow_second();
 		Thread.sleep(15000);
+		logger.log(Status.INFO, "User enters OTP and clicks clicks on arrow button");
+
 
 	}
 
@@ -141,24 +170,31 @@ public class Doctor_consult_page_steps_2 {
 		Thread.sleep(5000);
 		ldp.captureScreenshot();
 		Thread.sleep(7000);
+		
 
 		System.out.println("********** USER HAS BOOKED THE APPOINTMENT ************");
+		logger.log(Status.INFO, "It shows Booking Details option with Payment checkout page");
+
 
 	}
 	
 
-@Then("User enters Wrong OTP and clicks clicks on arrow button")
+@Then("User enters Wrong OTP and clicks on arrow button")
 public void user_enters_wrong_otp_and_clicks_clicks_on_arrow_button() throws InterruptedException {
-	Thread.sleep(4000);Thread.sleep(4000);
+	Thread.sleep(10000);
+	dp.arrow_second();
 	System.out.println("User Entered Wrong OTP For login");
 	Thread.sleep(4000);
+	logger.log(Status.INFO, "User enters Wrong OTP and clicks on arrow button");
+
     
 }
 @Then("User is not able to login sucessfully")
 public void user_is_not_able_to_login_sucessfully() throws InterruptedException {
 	Thread.sleep(4000);
 	System.out.println("User is not able to login sucessfully");
-	Thread.sleep(4000);
+	logger.log(Status.INFO, "User is not able to login sucessfully");
+
 
 
 

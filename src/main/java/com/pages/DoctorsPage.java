@@ -1,7 +1,12 @@
 package com.pages;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -35,8 +40,12 @@ public class DoctorsPage extends Utility {
 	@FindBy(xpath="//span[@class='icon-ic_arrow_forward']")
         WebElement login_arrow_two; // this button is clickable after entering otp
 	
-	@FindBy(xpath="//*[@id=\"mainContainerCT\"]/div/div[1]/div[2]/div[2]/div[6]/div/div/div[2]/div/div[2]/div[2]/button/span[1]/span")
+	@FindBy(xpath="	(//button[contains(@class, 'MuiButton-root') and contains(., 'Book Hospital Visit')])[1]\r\n"
+			+ "")
         WebElement book_hospital_after_login; // this button is for after login page for booking doctors
+	
+	
+
 	
 	
 	
@@ -65,8 +74,8 @@ public class DoctorsPage extends Utility {
 		BookButton.click();
 	}
 	
-	public void login_page() {
-		login.sendKeys("8700042264");
+	public void login_page(String nu) {
+		login.sendKeys(nu);
 		
 	}
 	
@@ -87,6 +96,19 @@ public class DoctorsPage extends Utility {
         PageFactory.initElements(driver, this);
     
     }
+	 public void captureScreenshot() throws Exception {
+
+	        Date currentDate = new Date();
+	        String screenshotFileName = currentDate.toString().replace(" ", "-").replace(":", "-");
+	        TakesScreenshot ts = (TakesScreenshot) driver;
+	        File binaryFile = ts.getScreenshotAs(OutputType.FILE);
+
+	        //Make sure screenshots folder is already created at the project level
+	        File imageFile = new File(screenshotsPath + screenshotFileName + ".png"); 
+	        FileUtils.copyFile(binaryFile, imageFile);
+
+
+	    }
 
 
 
