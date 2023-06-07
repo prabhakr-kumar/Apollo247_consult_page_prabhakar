@@ -3,6 +3,8 @@ package com.pages;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -45,17 +47,30 @@ public class DoctorsPage extends Utility {
         WebElement book_hospital_after_login; // this button is for after login page for booking doctors
 	
 	
-
-	
-	
-	
-	
-	
-
-	
+	@FindBy(xpath="(//*[@class='MuiInputBase-input MuiInput-input'])[3]")
+	private WebElement otp;
 	
 
 
+	@FindBy(xpath="//div[@class='MuiFormHelperText-root jss185 Mui-error']")
+	private WebElement otpinvalid_msg;
+	
+	
+	
+	public void invalidotp(String otpinvalid) {
+		otp.sendKeys(otpinvalid);
+	}
+	
+	
+	
+	public void invalidmsg() {
+		
+
+
+
+		System.out.print(otpinvalid_msg.getText());
+	}
+	
 	public void delhi_button()
 	{
 		Button.click();
@@ -80,7 +95,9 @@ public class DoctorsPage extends Utility {
 	}
 	
 	public void arrow_first() {
+		
 		login_arrow_one.click();
+		
 		
 	}
 	

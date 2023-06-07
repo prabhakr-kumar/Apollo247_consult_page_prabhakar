@@ -84,13 +84,6 @@ public class Doctor_consult_page_steps_1 extends Utility {
 
 	}
 
-	@Then("User naviagtes to Doctors Details Page")
-	public void user_naviagtes_to_doctors_details_page() throws InterruptedException {
-		Thread.sleep(2000);
-		logger.log(Status.INFO, "User naviagtes to Doctors Details Page");
-
-
-	}
 
 	@Then("Doctors detail fields are visible to user")
 	public void doctors_detail_fields_are_visible_to_user() throws Exception {

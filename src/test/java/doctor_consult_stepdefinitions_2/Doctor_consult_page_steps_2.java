@@ -46,6 +46,7 @@ public class Doctor_consult_page_steps_2 extends Utility {
 	@When("User clicks on Consult Section")
 	public void user_clicks_on_consult_section() throws Exception {
 		objectMethod();
+		Utility.implicitWait();
 		Thread.sleep(5000);
 		ldp.OnlineDoctorconsultPageNavigation();
 		Thread.sleep(5000);
@@ -81,11 +82,11 @@ public class Doctor_consult_page_steps_2 extends Utility {
 
 
 	}
-
-	@Then("User naviagtes to Doctors Details Page")
-	public void user_naviagtes_to_doctors_details_page() throws InterruptedException {
+	@Then("Doctors detail fields are visible to user")
+	public void doctors_detail_fields_are_visible_to_user() throws Exception {
 		Thread.sleep(2000);
-		logger.log(Status.INFO, "User naviagtes to Doctors Details Page");
+		dp.captureScreenshot();
+		logger.log(Status.INFO, "Doctors detail fields are visible to user");
 
 
 	}
@@ -152,22 +153,33 @@ public class Doctor_consult_page_steps_2 extends Utility {
 	}
 
 	@Then("User enters OTP and clicks clicks on arrow button")
-	public void user_enters_otp_and_clicks_clicks_on_arrow_button() throws IOException, InterruptedException {
+	public void user_enters_otp_and_clicks_clicks_on_arrow_button() throws Exception {
 		objectMethod();
 		Thread.sleep(5000);
 		dp.arrow_second();
 		Thread.sleep(15000);
 		logger.log(Status.INFO, "User enters OTP and clicks clicks on arrow button");
 
-
+		
 	}
-
+	
+	@Then("User enters Wrong OTP {string} and clicks on arrow button")
+	public void user_enters_wrong_otp_and_clicks_on_arrow_button(String otp) throws Exception {
+		objectMethod();
+		dp.invalidotp(otp);
+		dp.arrow_second();
+		dp.invalidmsg();
+		System.out.println("User Entered Wrong OTP For login");
+		Thread.sleep(4000);
+		logger.log(Status.INFO, "User enters Wrong OTP and clicks on arrow button");
+	}
+	
 	@Then("It shows Booking Details option with Payment checkout page")
 	public void it_shows_booking_details_option_with_payment_checkout_page() throws Exception {
 		objectMethod();
 		dp.book_hospital_final();
 		ldp.captureScreenshot();
-		Thread.sleep(5000);
+		Utility.implicitWait();
 		ldp.captureScreenshot();
 		Thread.sleep(7000);
 		
@@ -178,20 +190,10 @@ public class Doctor_consult_page_steps_2 extends Utility {
 
 	}
 	
-
-@Then("User enters Wrong OTP and clicks on arrow button")
-public void user_enters_wrong_otp_and_clicks_clicks_on_arrow_button() throws InterruptedException {
-	Thread.sleep(10000);
-	dp.arrow_second();
-	System.out.println("User Entered Wrong OTP For login");
-	Thread.sleep(4000);
-	logger.log(Status.INFO, "User enters Wrong OTP and clicks on arrow button");
-
-    
-}
 @Then("User is not able to login sucessfully")
 public void user_is_not_able_to_login_sucessfully() throws InterruptedException {
-	Thread.sleep(4000);
+	Utility.implicitWait();
+
 	System.out.println("User is not able to login sucessfully");
 	logger.log(Status.INFO, "User is not able to login sucessfully");
 

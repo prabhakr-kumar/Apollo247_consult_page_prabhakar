@@ -5,17 +5,21 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import io.cucumber.core.backend.Status;
-import io.cucumber.core.internal.com.fasterxml.jackson.databind.exc.InvalidFormatException;
+ 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+ 
+import com.aventstack.extentreports.Status;
 
-import com.pages.DoctorsPage;
-import com.pages.LandingPage;
-import com.pages.OnlineDoctorconsultPage;
 import com.utility.Config;
 import com.utility.ExcelReader;
 import com.utility.Utility;
-
-import io.cucumber.java.en.*;
+ 
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import com.pages.DoctorsPage;
+import com.pages.LandingPage;
+import com.pages.OnlineDoctorconsultPage;
 
 public class ExcelReader_valid_Steps extends Utility{
 	
@@ -45,6 +49,9 @@ public class ExcelReader_valid_Steps extends Utility{
 		ldp.notification_close();
 		System.out.println(ldp.elementDispaly());
 	    ldp.captureScreenshot();
+	    logger = report.createTest("test02");
+	    logger.log(Status.INFO,"Chrome is opened and Apollo247 app is opened");
+	    
 	}
 
 	@When("User clicks on Consult Section")
@@ -53,12 +60,16 @@ public class ExcelReader_valid_Steps extends Utility{
 		Thread.sleep(5000);
 		ldp.OnlineDoctorconsultPageNavigation();
 		Thread.sleep(5000);
+	    logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
+
 
 	}
 
 	@Then("User navigates on the Consult Page")
 	public void user_navigates_on_the_consult_page() throws InterruptedException {
 		Thread.sleep(2000);
+	    logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
+
 
 	}
 
@@ -68,12 +79,16 @@ public class ExcelReader_valid_Steps extends Utility{
 //		Click on the delhi button
 		dp.delhi_button();
 		Thread.sleep(3000);
+		logger.log(Status.INFO, "User clicks on popular cities");
+
 
 	}
-
-	@Then("User naviagtes to Doctors Details Page")
-	public void user_naviagtes_to_doctors_details_page() throws InterruptedException {
+	@Then("Doctors detail fields are visible to user")
+	public void doctors_detail_fields_are_visible_to_user() throws Exception {
 		Thread.sleep(2000);
+		dp.captureScreenshot();
+		logger.log(Status.INFO, "Doctors detail fields are visible to user");
+
 
 	}
 
@@ -82,6 +97,8 @@ public class ExcelReader_valid_Steps extends Utility{
 		objectMethod();
 		Thread.sleep(5000);
 		dp.filter();
+	    logger.log(Status.INFO, "User clicks on sort by Field");
+
 
 	}
 
@@ -92,6 +109,8 @@ public class ExcelReader_valid_Steps extends Utility{
 
 		dp.lowhigh();
 		Thread.sleep(3000);
+	    logger.log(Status.INFO, "User selects Price- Low to High");
+
 
 	}
 
@@ -105,6 +124,8 @@ public class ExcelReader_valid_Steps extends Utility{
 		objectMethod();
 		dp.book_hospital();
 		Thread.sleep(4000);
+	    logger.log(Status.INFO, "User Clicks on the Book Hospital Visit button");
+
 
 	}
 
@@ -125,6 +146,8 @@ public class ExcelReader_valid_Steps extends Utility{
 		dp.login_page(Mobile);
 
         Thread.sleep(5000);
+	    logger.log(Status.INFO, "User enters contact number from sheetname {string} and rownumber {int}");
+
     }
 
 
@@ -137,6 +160,8 @@ public class ExcelReader_valid_Steps extends Utility{
 		objectMethod();
 		dp.arrow_first();
 		Thread.sleep(4000);
+	    logger.log(Status.INFO, "User click on arrow button");
+
 
 	}
 
@@ -146,6 +171,8 @@ public class ExcelReader_valid_Steps extends Utility{
 		Thread.sleep(5000);
 		dp.arrow_second();
 		Thread.sleep(15000);
+	    logger.log(Status.INFO, "User enters OTP and clicks on arrow button");
+
 
 	}
 
@@ -157,6 +184,8 @@ public class ExcelReader_valid_Steps extends Utility{
 		Thread.sleep(5000);
 		ldp.captureScreenshot();
 		Thread.sleep(7000);
+	    logger.log(Status.INFO, "It shows Booking Details option with Payment checkout page");
+
 
 		System.out.println("********** USER HAS BOOKED THE APPOINTMENT ************");
 
@@ -167,6 +196,8 @@ public class ExcelReader_valid_Steps extends Utility{
 	    Thread.sleep(15000);
 	    dp.arrow_second();
 	    Thread.sleep(15000);
+	    logger.log(Status.INFO, "User enters Wrong OTP and clicks on arrow button");
+
    
 }
 	@Then("User is not able to login sucessfully")
@@ -174,6 +205,8 @@ public class ExcelReader_valid_Steps extends Utility{
 		objectMethod();
 		Thread.sleep(5000);
 		System.out.println("User is not able to login Sucessfully");
+	    logger.log(Status.INFO, "User is not able to login sucessfully");
+
 		
 
 	}
