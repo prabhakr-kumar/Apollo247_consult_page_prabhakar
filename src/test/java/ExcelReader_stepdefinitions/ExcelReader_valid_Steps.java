@@ -160,7 +160,26 @@ public class ExcelReader_valid_Steps extends Utility{
 
 		System.out.println("********** USER HAS BOOKED THE APPOINTMENT ************");
 
-	}}
+	}
+	@Then("User enters Wrong OTP and clicks on arrow button")
+	public void user_enters_wrong_otp_and_clicks_on_arrow_button() throws IOException, InterruptedException {
+	    objectMethod();
+	    Thread.sleep(15000);
+	    dp.arrow_second();
+	    Thread.sleep(15000);
+   
+}
+	@Then("User is not able to login sucessfully")
+	public void user_is_not_able_to_login_sucessfully() throws IOException, InterruptedException {
+		objectMethod();
+		Thread.sleep(5000);
+		System.out.println("User is not able to login Sucessfully");
+		
+
+	}
+	
+	
+	}
 
 
 

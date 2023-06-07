@@ -35,7 +35,7 @@ public class Doctor_consult_page_steps_1 extends Utility {
 		objectMethod();
 		Utility.implicitWait();
 		String actualtitle = ldp.validateLandingPageTitle();
-		String expectedtitle = "Always caring about your health, we are here to help you!";
+		String expectedtitle = "Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home";
 		assertEquals(expectedtitle, actualtitle);
 		System.out.println(actualtitle);
 		Thread.sleep(7000);
@@ -132,7 +132,7 @@ public class Doctor_consult_page_steps_1 extends Utility {
 
 	}
 
-	@Then("User clicks on Book Hospital Visit Button")
+	@Then("User clicks on Book Hospital Visit button")
 	public void user_clicks_on_book_hospital_visit_button() throws IOException, InterruptedException {
 		objectMethod();
 		Utility.implicitWait();
