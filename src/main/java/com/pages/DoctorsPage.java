@@ -65,9 +65,6 @@ public class DoctorsPage extends Utility {
 	
 	public void invalidmsg() {
 		
-
-
-
 		System.out.print(otpinvalid_msg.getText());
 	}
 	
