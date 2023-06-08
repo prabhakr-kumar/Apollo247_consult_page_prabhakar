@@ -52,7 +52,7 @@ public class DoctorsPage extends Utility {
 	
 
 
-	@FindBy(xpath="//div[@class='MuiFormHelperText-root jss185 Mui-error']")
+	@FindBy(xpath="//div[contains(text(), 'Incorrect OTP') and contains(text(), 'attempts left')]")
 	private WebElement otpinvalid_msg;
 	
 	

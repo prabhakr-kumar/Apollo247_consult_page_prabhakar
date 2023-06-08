@@ -155,9 +155,8 @@ public class Doctor_consult_page_steps_2 extends Utility {
 	@Then("User enters OTP and clicks clicks on arrow button")
 	public void user_enters_otp_and_clicks_clicks_on_arrow_button() throws Exception {
 		objectMethod();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		dp.arrow_second();
-		Thread.sleep(15000);
 		logger.log(Status.INFO, "User enters OTP and clicks clicks on arrow button");
 
 		
@@ -177,6 +176,8 @@ public class Doctor_consult_page_steps_2 extends Utility {
 	@Then("It shows Booking Details option with Payment checkout page")
 	public void it_shows_booking_details_option_with_payment_checkout_page() throws Exception {
 		objectMethod();
+		Utility.implicitWait();
+		Thread.sleep(5000);
 		dp.book_hospital_final();
 		ldp.captureScreenshot();
 		Utility.implicitWait();
