@@ -34,17 +34,33 @@ public class Doctor_consult_page_steps_1 extends Utility {
 
 		objectMethod();
 		Utility.implicitWait();
-		String actualtitle = ldp.validateLandingPageTitle();
-		String expectedtitle = "Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home";
-		assertEquals(expectedtitle, actualtitle);
-		System.out.println(actualtitle);
 		Thread.sleep(7000);
 		ldp.notification_close();
 		System.out.println(ldp.elementDispaly());
 		ldp.captureScreenshot();
-
 		logger = report.createTest("test01");
 		logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
+		String actualTitle = ldp.validateLandingPageTitle();
+		String expectedTitle = "Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home";
+		
+		try {
+            assertEquals(actualTitle, expectedTitle);
+            logger.log(Status.PASS, "Step1 is passed");
+            System.out.println(actualTitle);
+            assert true;
+        } catch (AssertionError e) {
+         e.printStackTrace();
+            logger.log(Status.FAIL, "Step1 is failed");
+            captureScreenshotOnFailure();
+            assert false;
+        }
+
+//		Thread.sleep(7000);
+//		ldp.notification_close();
+//		System.out.println(ldp.elementDispaly());
+//		ldp.captureScreenshot();
+
+	
 
 	}
 
