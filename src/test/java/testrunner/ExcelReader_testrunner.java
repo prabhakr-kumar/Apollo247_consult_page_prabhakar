@@ -4,7 +4,6 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 
-import org.junit.runner.RunWith;
 @CucumberOptions(
 		features = {"src/test/resources/features/ExcelReader.feature"},
 		glue = {"ExcelReader_stepdefinitions","apphooks" },

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="102.984" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="To Check Online Doctor Consult Page" name="Verify Login functionality with Invalid registered number - Example #1.1" time="102.809">
+<testsuite name="Cucumber" time="109.211" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="To Check Online Doctor Consult Page" name="Verify Login functionality with Invalid registered number - Example #1.1" time="108.947">
 <system-out><![CDATA[
 Given Chrome is opened and Apollo247 app is opened..........................passed
 When User clicks on Consult Section.........................................passed

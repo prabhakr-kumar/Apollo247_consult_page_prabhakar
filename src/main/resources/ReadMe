@@ -8,9 +8,10 @@ src/main/java:
         Config.properties
 
     com.pages:
-        DoctorsPage.java
         LandingPage.java
         OnlineDoctorconsultPage.java
+        DoctorsPage.java
+        
 
     com.testdata:
         testdata.xlsx    
@@ -26,25 +27,34 @@ src/test/java:
     com.apphooks:
         ApplicationHooks.java
 
-    com.loginpage_stepdefinitions:
-        LoginPageSteps.java
+    com.doctor_consult_stepdefinitions_1
+        Doctor_consult_page_steps_1.java
+    com.doctor_consult_stepdefinitions_2
+        Doctor_consult_page_steps_1.java
+        
+    com.ExcelReader_stepdefinitions
+        ExcelReader_valid_Steps.java
 
     com.testrunner:
-        LoginPage_TestRunner.java    
+        Doctor_consult_testrunner_1.java
+        Doctor_consult_testrunner_2.java 
+        ExcelReader_testrunner.java  
 
 src/main/resources:
     ReadMe
 
 src/test/resources:
     features folder
-        LoginPage.feature
+        Doctor_consult_page1.feature
+        Doctor_consult_page2.feature
+        ExcelReader.feature
     testng.xml        
  
 drivers folder:
     chromedriver.exe
 
 screenshots folder:
-    file.png    
+    Fri-Jun-02-14-25-22-IST-2023.png    
  
 cucumber_report folder:
     cucumber.html
@@ -77,23 +87,19 @@ Step 6 --> Create ExtentReportManager.java
 Step 7 --> Create Utility.java
 Step 8 --> Create ExcelReader.java
 Step 9 --> Create LandingPage.java
-Step 10 --> Create LoginPage.java
-Step 11 --> Create HomePage.java
+Step 10 --> Create OnlineDoctorconsultPage.java
+Step 11 -->Create DoctorsPage.java
 Step 12 --> Create ApplicationHooks.java
-Step 13 --> Create LandingPageSteps.java
-Step 14 --> Create LoginPageSteps.java
-Step 15 --> Create HomePageSteps.java
-Step 16 --> Create LandingPage_TestRunner.java
-Step 17 --> Create LoginPage_TestRunner.java
-Step 18 --> Create HomePage_TestRunner.java
+Step 13 --> Create Doctor_consult_page_steps_1
+Step 14 --> Create Doctor_consult_page_steps_1.java
+Step 15 --> Create ExcelReader_valid_Steps.java
+Step 16 --> Create Doctor_consult_testrunner_1.java
+Step 17 --> Create Doctor_consult_testrunner_2.java
+Step 18 --> Create ExcelReader_testrunner.java
 Step 19 --> Create testng.xml
- 
-
 Create the drivers folder and keep driver in it
 Create the screenshots folder to keep screenshots in it
-Run the tests by using Test class(individual test class) or testng.xml(all test classes) or pom.xml
- 
-
+Run the tests by using Test class(individual test class) or testng.xml(all test classes) or pom.xmld
 See the reports in test-output folder(created by testng)
 See the reports in target folder(created by maven)
 See the reports in cucumber_report folder(created by cucumber)
