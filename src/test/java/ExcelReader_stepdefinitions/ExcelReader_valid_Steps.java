@@ -5,8 +5,9 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
- 
- 
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+
 import com.aventstack.extentreports.Status;
 
 import com.utility.Config;
@@ -167,7 +168,7 @@ public class ExcelReader_valid_Steps extends Utility{
 	@Then("User enters OTP and clicks on arrow button")
 	public void user_enters_otp_and_clicks_on_arrow_button() throws IOException, InterruptedException {
 		objectMethod();
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		dp.arrow_second();
 		Thread.sleep(15000);
 	    logger.log(Status.INFO, "User enters OTP and clicks on arrow button");
@@ -189,21 +190,34 @@ public class ExcelReader_valid_Steps extends Utility{
 		System.out.println("********** USER HAS BOOKED THE APPOINTMENT ************");
 
 	}
-	@Then("User enters Wrong OTP and clicks on arrow button")
-	public void user_enters_wrong_otp_and_clicks_on_arrow_button() throws IOException, InterruptedException {
-	    objectMethod();
-	    Thread.sleep(15000);
-	    dp.arrow_second();
-	    Thread.sleep(15000);
-	    logger.log(Status.INFO, "User enters Wrong OTP and clicks on arrow button");
+//	@Then("User enters Wrong OTP and clicks on arrow button")
+//	public void user_enters_wrong_otp_and_clicks_on_arrow_button() throws IOException, InterruptedException {
+	@Then("User enters Wrong OTP sheetname {string} and rownumber {int} and clicks on arrow button")
+	public void user_enters_wrong_otp_sheetname_and_rownumber_and_clicks_on_arrow_button(String SheetName, Integer RowNumber) throws IOException, InterruptedException, InvalidFormatException {
+//	    objectMethod();
+//	    Thread.sleep(15000);
+//	    dp.arrow_second();
+//	    Thread.sleep(15000);
+//	    logger.log(Status.INFO, "User enters Wrong OTP and clicks on arrow button");
+		Thread.sleep(7000);
+        objectMethod();
+        reader = new ExcelReader();
+        List<Map<String,String>> testData = reader.getData(Config.excelPath, SheetName);
+ 
+        String otp = testData.get(RowNumber).get("otp");
+        dp.invalidotp(otp);
+        Thread.sleep(5000);
+		System.out.println("User Entered Wrong OTP For login");
+
+	    logger.log(Status.INFO, "User enters contact number from sheetname {string} and rownumber {int}");
 
    
 }
+	
 	@Then("User is not able to login sucessfully")
 	public void user_is_not_able_to_login_sucessfully() throws IOException, InterruptedException {
 		objectMethod();
 		Thread.sleep(5000);
-		System.out.println("User is not able to login Sucessfully");
 	    logger.log(Status.INFO, "User is not able to login sucessfully");
 
 		

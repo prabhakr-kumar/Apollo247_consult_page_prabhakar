@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="198.993" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="To Check Online Doctor Consult Page" name="Verify Login functionality with Valid registered number - Example #1.1" time="98.901">
+<testsuite name="Cucumber" time="85.366" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="To Check Online Doctor Consult Page" name="Verify Login functionality with Invalid registered number - Example #1.1" time="85.181">
 <system-out><![CDATA[
 Given Chrome is opened and Apollo247 app is opened..........................passed
 When User clicks on Consult Section.........................................passed
@@ -13,24 +13,7 @@ Then Application sorts the doctors list based on price......................pass
 When User Clicks on the Book Hospital Visit button..........................passed
 When User enters contact number from sheetname "Sheet1" and rownumber 0.....passed
 Then User click on arrow button.............................................passed
-Then User enters OTP and clicks on arrow button.............................passed
-Then It shows Booking Details option with Payment checkout page.............passed
-]]></system-out>
-</testcase>
-<testcase classname="To Check Online Doctor Consult Page" name="Verify Login functionality with Invalid registered number - Example #1.1" time="99.907">
-<system-out><![CDATA[
-Given Chrome is opened and Apollo247 app is opened..........................passed
-When User clicks on Consult Section.........................................passed
-Then User navigates on the Consult Page.....................................passed
-When User clicks on popular cities..........................................passed
-Then Doctors detail fields are visible to user..............................passed
-When User clicks on sort by Field...........................................passed
-And User selects Price- Low to High.........................................passed
-Then Application sorts the doctors list based on price......................passed
-When User Clicks on the Book Hospital Visit button..........................passed
-When User enters contact number from sheetname "Sheet1" and rownumber 0.....passed
-Then User click on arrow button.............................................passed
-Then User enters Wrong OTP and clicks on arrow button.......................passed
+Then User enters Wrong OTP sheetname "Sheet1" and rownumber 0 and clicks on arrow button.passed
 Then User is not able to login sucessfully..................................passed
 ]]></system-out>
 </testcase>
