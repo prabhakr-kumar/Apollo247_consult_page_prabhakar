@@ -5,7 +5,7 @@
 		<classes>
 			<class name="testrunner.Doctor_consult_testrunner_1" />
 			<class name="testrunner.Doctor_consult_testrunner_2" />
-			<class name="testrunner.ExcelReader_testrunner.java" />
+			<class name="testrunner.ExcelReader_testrunner" />
 		</classes>
 	</test> <!--Test -->
 </suite> <!--Suite -->
