@@ -22,7 +22,10 @@ public class DoctorsPage extends Utility {
 	private WebElement Button;  
 	
 
-	@FindBy(xpath="//span[@class='jss257']")
+//	@FindBy(xpath="//span[@class='jss257']")
+//	private WebElement sort_select;
+	
+    @FindBy(xpath="//span[@class='jss260']")
 	private WebElement sort_select;
 	
 	@FindBy(xpath="//*[text()='Price - low to high']")

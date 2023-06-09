@@ -42,25 +42,18 @@ public class Doctor_consult_page_steps_1 extends Utility {
 		logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
 		String actualTitle = ldp.validateLandingPageTitle();
 		String expectedTitle = "Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home";
-		
+
 		try {
-            assertEquals(actualTitle, expectedTitle);
-            logger.log(Status.PASS, "Step1 is passed");
-            System.out.println(actualTitle);
-            assert true;
-        } catch (AssertionError e) {
-         e.printStackTrace();
-            logger.log(Status.FAIL, "Step1 is failed");
-            captureScreenshotOnFailure();
-            assert false;
-        }
-
-//		Thread.sleep(7000);
-//		ldp.notification_close();
-//		System.out.println(ldp.elementDispaly());
-//		ldp.captureScreenshot();
-
-	
+			assertEquals(actualTitle, expectedTitle);
+			logger.log(Status.PASS, "Step1 is passed");
+			System.out.println(actualTitle);
+			assert true;
+		} catch (AssertionError e) {
+			e.printStackTrace();
+			logger.log(Status.FAIL, "Step1 is failed");
+			captureScreenshotOnFailure();
+			assert false;
+		}
 
 	}
 
@@ -70,20 +63,16 @@ public class Doctor_consult_page_steps_1 extends Utility {
 		Utility.implicitWait();
 		ldp.OnlineDoctorconsultPageNavigation();
 		Thread.sleep(3000);
-		
-		logger.log(Status.INFO, "User clicks on Consult Section");
 
+		logger.log(Status.INFO, "User clicks on Consult Section");
 
 	}
 
 	@Then("User navigates on the Consult Page")
 	public void user_navigates_on_the_consult_page() throws InterruptedException {
 		Thread.sleep(2000);
-		
-		logger.log(Status.INFO, "User navigates on the Consult Page");
 
-		
-		
+		logger.log(Status.INFO, "User navigates on the Consult Page");
 
 	}
 
@@ -97,16 +86,13 @@ public class Doctor_consult_page_steps_1 extends Utility {
 		Thread.sleep(3000);
 		logger.log(Status.INFO, "User clicks on popular cities");
 
-
 	}
-
 
 	@Then("Doctors detail fields are visible to user")
 	public void doctors_detail_fields_are_visible_to_user() throws Exception {
 		Thread.sleep(2000);
 		dp.captureScreenshot();
 		logger.log(Status.INFO, "Doctors detail fields are visible to user");
-
 
 	}
 
@@ -120,7 +106,6 @@ public class Doctor_consult_page_steps_1 extends Utility {
 		Thread.sleep(3000);
 		logger.log(Status.INFO, "User clicks on sort by Field");
 
-
 	}
 
 	@When("User selects Price- Low to High")
@@ -130,14 +115,12 @@ public class Doctor_consult_page_steps_1 extends Utility {
 		Thread.sleep(3000);
 		logger.log(Status.INFO, "User selects Price- Low to High");
 
-
 	}
 
 	@Then("Application sorts the doctors list based on price")
 	public void application_sorts_the_doctors_list_based_on_price() throws Exception {
 		dp.captureScreenshot();
 		logger.log(Status.INFO, "Application sorts the doctors list based on price");
-
 
 	}
 
@@ -149,7 +132,6 @@ public class Doctor_consult_page_steps_1 extends Utility {
 		dp.book_hospital();
 		Thread.sleep(4000);
 		logger.log(Status.INFO, "User clicks on Book Hospital Visit Button");
-
 
 	}
 

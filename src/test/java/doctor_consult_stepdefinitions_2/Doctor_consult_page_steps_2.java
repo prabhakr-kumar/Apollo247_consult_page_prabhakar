@@ -34,12 +34,12 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		String actualtitle = ldp.validateLandingPageTitle();
 		String expectedtitle = "Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home";
 		assertEquals(expectedtitle, actualtitle);
-		System.out.println(actualtitle); 
+		System.out.println(actualtitle);
 		Thread.sleep(7000);
 		ldp.notification_close();
 		System.out.println(ldp.elementDispaly());
-	    ldp.captureScreenshot();
-	    logger = report.createTest("test02");
+		ldp.captureScreenshot();
+		logger = report.createTest("test02");
 		logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
 	}
 
@@ -51,24 +51,16 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		ldp.OnlineDoctorconsultPageNavigation();
 		Thread.sleep(5000);
 
-//	    String actualText = ldp.textCapture();
-//	    String expectedText = "Online Doctor Consultation";
-//	    assertEquals(expectedText, actualText);
-//		System.out.println(actualText); 
-//
-//		Thread.sleep(2000);
-		
-		logger.log(Status.INFO, "User clicks on Consult Section");
 
+		logger.log(Status.INFO, "User clicks on Consult Section");
 
 	}
 
 	@Then("User navigates on the Consult Page")
 	public void user_navigates_on_the_consult_page() throws InterruptedException {
 		Thread.sleep(2000);
-		
-		logger.log(Status.INFO, "User navigates on the Consult Page");
 
+		logger.log(Status.INFO, "User navigates on the Consult Page");
 
 	}
 
@@ -80,14 +72,13 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		Thread.sleep(3000);
 		logger.log(Status.INFO, "User clicks on popular cities");
 
-
 	}
+
 	@Then("Doctors detail fields are visible to user")
 	public void doctors_detail_fields_are_visible_to_user() throws Exception {
 		Thread.sleep(2000);
 		dp.captureScreenshot();
 		logger.log(Status.INFO, "Doctors detail fields are visible to user");
-
 
 	}
 
@@ -97,7 +88,6 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		Thread.sleep(5000);
 		dp.filter();
 		logger.log(Status.INFO, "User clicks on sort by Field");
-
 
 	}
 
@@ -110,14 +100,12 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		Thread.sleep(3000);
 		logger.log(Status.INFO, "User selects Price- Low to High");
 
-
 	}
 
 	@Then("Application sorts the doctors list based on price")
 	public void application_sorts_the_doctors_list_based_on_price() throws InterruptedException {
 		Thread.sleep(4000);
 		logger.log(Status.INFO, "Application sorts the doctors list based on price");
-
 
 	}
 
@@ -126,9 +114,8 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		objectMethod();
 		dp.book_hospital();
 		Thread.sleep(4000);
-		
-		logger.log(Status.INFO, "User Clicks on the Book Hospital Visit button");
 
+		logger.log(Status.INFO, "User Clicks on the Book Hospital Visit button");
 
 	}
 
@@ -139,7 +126,6 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		Thread.sleep(4000); // This will enter the mobile number in login popup
 		logger.log(Status.INFO, "User enters contact number {string}");
 
-
 	}
 
 	@Then("User click on arrow button")
@@ -148,7 +134,6 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		dp.arrow_first();
 		Thread.sleep(4000);
 		logger.log(Status.INFO, "User click on arrow button");
-
 
 	}
 
@@ -159,9 +144,8 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		dp.arrow_second();
 		logger.log(Status.INFO, "User enters OTP and clicks clicks on arrow button");
 
-		
 	}
-	
+
 	@Then("User enters Wrong OTP {string} and clicks on arrow button")
 	public void user_enters_wrong_otp_and_clicks_on_arrow_button(String otp) throws Exception {
 		objectMethod();
@@ -172,7 +156,7 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		Thread.sleep(4000);
 		logger.log(Status.INFO, "User enters Wrong OTP and clicks on arrow button");
 	}
-	
+
 	@Then("It shows Booking Details option with Payment checkout page")
 	public void it_shows_booking_details_option_with_payment_checkout_page() throws Exception {
 		objectMethod();
@@ -183,25 +167,19 @@ public class Doctor_consult_page_steps_2 extends Utility {
 		Utility.implicitWait();
 		ldp.captureScreenshot();
 		Thread.sleep(7000);
-		
 
 		System.out.println("********** USER HAS BOOKED THE APPOINTMENT ************");
 		logger.log(Status.INFO, "It shows Booking Details option with Payment checkout page");
 
+	}
+
+	@Then("User is not able to login sucessfully")
+	public void user_is_not_able_to_login_sucessfully() throws InterruptedException {
+		Utility.implicitWait();
+
+		System.out.println("User is not able to login sucessfully");
+		logger.log(Status.INFO, "User is not able to login sucessfully");
 
 	}
-	
-@Then("User is not able to login sucessfully")
-public void user_is_not_able_to_login_sucessfully() throws InterruptedException {
-	Utility.implicitWait();
-
-	System.out.println("User is not able to login sucessfully");
-	logger.log(Status.INFO, "User is not able to login sucessfully");
-
-
-
-
-}
-
 
 }

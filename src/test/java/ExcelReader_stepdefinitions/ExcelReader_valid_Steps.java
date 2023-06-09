@@ -13,7 +13,7 @@ import com.aventstack.extentreports.Status;
 import com.utility.Config;
 import com.utility.ExcelReader;
 import com.utility.Utility;
- 
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -21,13 +21,12 @@ import com.pages.DoctorsPage;
 import com.pages.LandingPage;
 import com.pages.OnlineDoctorconsultPage;
 
-public class ExcelReader_valid_Steps extends Utility{
-	
+public class ExcelReader_valid_Steps extends Utility {
 
 	public LandingPage ldp;
 	public OnlineDoctorconsultPage odcp;
 	public DoctorsPage dp;
-    ExcelReader reader;
+	ExcelReader reader;
 
 	public void objectMethod() throws IOException {
 
@@ -44,14 +43,14 @@ public class ExcelReader_valid_Steps extends Utility{
 		String actualtitle = ldp.validateLandingPageTitle();
 		String expectedtitle = "Apollo 247 - Online Doctor Consultation & Book Lab Tests at Home";
 		assertEquals(expectedtitle, actualtitle);
-		System.out.println(actualtitle); 
+		System.out.println(actualtitle);
 		Thread.sleep(7000);
 		ldp.notification_close();
 		System.out.println(ldp.elementDispaly());
-	    ldp.captureScreenshot();
-	    logger = report.createTest("test02");
-	    logger.log(Status.INFO,"Chrome is opened and Apollo247 app is opened");
-	    
+		ldp.captureScreenshot();
+		logger = report.createTest("test02");
+		logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
+
 	}
 
 	@When("User clicks on Consult Section")
@@ -60,16 +59,14 @@ public class ExcelReader_valid_Steps extends Utility{
 		Thread.sleep(5000);
 		ldp.OnlineDoctorconsultPageNavigation();
 		Thread.sleep(5000);
-	    logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
-
+		logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
 
 	}
 
 	@Then("User navigates on the Consult Page")
 	public void user_navigates_on_the_consult_page() throws InterruptedException {
 		Thread.sleep(2000);
-	    logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
-
+		logger.log(Status.INFO, "Chrome is opened and Apollo247 app is opened");
 
 	}
 
@@ -81,14 +78,13 @@ public class ExcelReader_valid_Steps extends Utility{
 		Thread.sleep(3000);
 		logger.log(Status.INFO, "User clicks on popular cities");
 
-
 	}
+
 	@Then("Doctors detail fields are visible to user")
 	public void doctors_detail_fields_are_visible_to_user() throws Exception {
 		Thread.sleep(2000);
 		dp.captureScreenshot();
 		logger.log(Status.INFO, "Doctors detail fields are visible to user");
-
 
 	}
 
@@ -97,8 +93,7 @@ public class ExcelReader_valid_Steps extends Utility{
 		objectMethod();
 		Thread.sleep(5000);
 		dp.filter();
-	    logger.log(Status.INFO, "User clicks on sort by Field");
-
+		logger.log(Status.INFO, "User clicks on sort by Field");
 
 	}
 
@@ -109,8 +104,7 @@ public class ExcelReader_valid_Steps extends Utility{
 
 		dp.lowhigh();
 		Thread.sleep(3000);
-	    logger.log(Status.INFO, "User selects Price- Low to High");
-
+		logger.log(Status.INFO, "User selects Price- Low to High");
 
 	}
 
@@ -124,44 +118,33 @@ public class ExcelReader_valid_Steps extends Utility{
 		objectMethod();
 		dp.book_hospital();
 		Thread.sleep(4000);
-	    logger.log(Status.INFO, "User Clicks on the Book Hospital Visit button");
-
+		logger.log(Status.INFO, "User Clicks on the Book Hospital Visit button");
 
 	}
 
-//	@When("User enters contact number {String} from sheetname {string} and rownumber {int}")
-//	public void user_enters_contact_number_from_sheetname_and_rownumber(String SheetName , Integer rowNumber) {
-		
 	@When("User enters contact number from sheetname {string} and rownumber {int}")
-	public void user_enters_contact_number_from_sheetname_and_rownumber(String SheetName, Integer rowNumber) throws InterruptedException, org.apache.poi.openxml4j.exceptions.InvalidFormatException, IOException {
-	    
-	
-		
-        Thread.sleep(10000);
-        objectMethod();
-        reader = new ExcelReader();
-        List<Map<String,String>> testData = reader.getData(Config.excelPath, SheetName);
- 
-        String Mobile = testData.get(rowNumber).get("contact");
+	public void user_enters_contact_number_from_sheetname_and_rownumber(String SheetName, Integer rowNumber)
+			throws InterruptedException, org.apache.poi.openxml4j.exceptions.InvalidFormatException, IOException {
+
+		Thread.sleep(10000);
+		objectMethod();
+		reader = new ExcelReader();
+		List<Map<String, String>> testData = reader.getData(Config.excelPath, SheetName);
+
+		String Mobile = testData.get(rowNumber).get("contact");
 		dp.login_page(Mobile);
 
-        Thread.sleep(5000);
-	    logger.log(Status.INFO, "User enters contact number from sheetname {string} and rownumber {int}");
+		Thread.sleep(5000);
+		logger.log(Status.INFO, "User enters contact number from sheetname {string} and rownumber {int}");
 
-    }
-
-
-
-	
-
+	}
 
 	@Then("User click on arrow button")
 	public void user_click_on_arrow_button() throws IOException, InterruptedException {
 		objectMethod();
 		dp.arrow_first();
 		Thread.sleep(4000);
-	    logger.log(Status.INFO, "User click on arrow button");
-
+		logger.log(Status.INFO, "User click on arrow button");
 
 	}
 
@@ -171,8 +154,7 @@ public class ExcelReader_valid_Steps extends Utility{
 		Thread.sleep(15000);
 		dp.arrow_second();
 		Thread.sleep(15000);
-	    logger.log(Status.INFO, "User enters OTP and clicks on arrow button");
-
+		logger.log(Status.INFO, "User enters OTP and clicks on arrow button");
 
 	}
 
@@ -184,47 +166,35 @@ public class ExcelReader_valid_Steps extends Utility{
 		Thread.sleep(5000);
 		ldp.captureScreenshot();
 		Thread.sleep(7000);
-	    logger.log(Status.INFO, "It shows Booking Details option with Payment checkout page");
-
+		logger.log(Status.INFO, "It shows Booking Details option with Payment checkout page");
 
 		System.out.println("********** USER HAS BOOKED THE APPOINTMENT ************");
 
 	}
-//	@Then("User enters Wrong OTP and clicks on arrow button")
-//	public void user_enters_wrong_otp_and_clicks_on_arrow_button() throws IOException, InterruptedException {
+
 	@Then("User enters Wrong OTP sheetname {string} and rownumber {int} and clicks on arrow button")
-	public void user_enters_wrong_otp_sheetname_and_rownumber_and_clicks_on_arrow_button(String SheetName, Integer RowNumber) throws IOException, InterruptedException, InvalidFormatException {
-//	    objectMethod();
-//	    Thread.sleep(15000);
-//	    dp.arrow_second();
-//	    Thread.sleep(15000);
-//	    logger.log(Status.INFO, "User enters Wrong OTP and clicks on arrow button");
+	public void user_enters_wrong_otp_sheetname_and_rownumber_and_clicks_on_arrow_button(String SheetName,
+			Integer RowNumber) throws IOException, InterruptedException, InvalidFormatException {
 		Thread.sleep(7000);
-        objectMethod();
-        reader = new ExcelReader();
-        List<Map<String,String>> testData = reader.getData(Config.excelPath, SheetName);
- 
-        String otp = testData.get(RowNumber).get("otp");
-        dp.invalidotp(otp);
-        Thread.sleep(5000);
+		objectMethod();
+		reader = new ExcelReader();
+		List<Map<String, String>> testData = reader.getData(Config.excelPath, SheetName);
+
+		String otp = testData.get(RowNumber).get("otp");
+		dp.invalidotp(otp);
+		Thread.sleep(5000);
 		System.out.println("User Entered Wrong OTP For login");
 
-	    logger.log(Status.INFO, "User enters contact number from sheetname {string} and rownumber {int}");
+		logger.log(Status.INFO, "User enters contact number from sheetname {string} and rownumber {int}");
 
-   
-}
-	
+	}
+
 	@Then("User is not able to login sucessfully")
 	public void user_is_not_able_to_login_sucessfully() throws IOException, InterruptedException {
 		objectMethod();
 		Thread.sleep(5000);
-	    logger.log(Status.INFO, "User is not able to login sucessfully");
-
-		
+		logger.log(Status.INFO, "User is not able to login sucessfully");
 
 	}
-	
-	
-	}
 
-
+}
